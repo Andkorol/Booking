@@ -1,5 +1,3 @@
-# Booking
-
 ---
 
 # Reservation Management System
