@@ -67,11 +67,6 @@ The application uses PostgreSQL to persistently store and manage data. For examp
 Ensure you create the following tables in PostgreSQL:
 
 ```sql
-CREATE TABLE customers (
-    customer_id SERIAL PRIMARY KEY,
-    name VARCHAR(100),
-    contact_info VARCHAR(150)
-);
 
 CREATE TABLE flights (
     flight_id SERIAL PRIMARY KEY,
@@ -87,14 +82,6 @@ CREATE TABLE hotels (
     hotel_name VARCHAR(100),
     check_in_date DATE,
     check_out_date DATE
-);
-
-CREATE TABLE cars (
-    car_id SERIAL PRIMARY KEY,
-    customer_id INT REFERENCES customers(customer_id),
-    car_model VARCHAR(100),
-    rental_start_date DATE,
-    rental_end_date DATE
 );
 ```
 
